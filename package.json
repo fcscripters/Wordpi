@@ -1,0 +1,38 @@
+{
+  "name": "wordpi",
+  "version": "1.0.0",
+  "description": "Simple word guessing game created using Node.js",
+  "main": "api.js",
+  "scripts": {
+    "test": "./node_modules/.bin/tape ./test/*",
+    "start": "node server.js",
+    "coverage": "./node_modules/.bin/istanbul cover test/*",
+    "codeclimate": "CODECLIMATE_REPO_TOKEN=!!!**ADD-TOKEN-HERE**!!! ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < ./coverage/lcov.info",
+    "jshint": "jshint -c .jshintrc --exclude-path .gitignore .",
+    "nodemon":"./node_modules/.bin/nodemon ./server.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fcscripters/Wordpi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fcscripters/Wordpi/issues"
+  },
+  "homepage": "https://github.com/fcscripters/Wordpi#readme",
+  "devDependencies": {
+    "istanbul": "^0.3.21",
+    "pre-commit": "^1.1.1",
+    "shot": "^1.6.1",
+    "tape": "^4.2.0",
+    "travis": "^0.1.1"
+  },
+  "pre-commit": [
+    "jshint",
+    "coverage",
+    "codeclimate",
+    "Travis"
+  ]
+}
