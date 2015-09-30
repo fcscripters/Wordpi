@@ -1,7 +1,7 @@
 
 var http = require('http');
 var port = process.env.PORT || 3000;
-var ac = require('./index.js');
+var handler = require('handler.js');
 var fs = require('fs');
 
 var index = fs.readFileSync(__dirname + '/index.html');

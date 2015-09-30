@@ -1,8 +1,27 @@
 var assert = require('assert');
 var ac = require('../index.js');
 var testindex = 1; // see: https://testanything.org/tap-version-13-specification.html
+
+var shot = require("shot");
+var handler = require("../handler");
+var test = require("tape");
+
+test("Home page", function (t) {
+  var request = {
+    method: "GET",
+    url: "/"
+  };
+
+  shot.inject(handler, request, function (res) {
+    t.equal(res.statusCode, 200);
+    t.end();
+  });
+
+});
+
 assert.equal(typeof ac, 'object');
 assert.equal(typeof ac.import, 'function');
+
 
 console.log("# ac.import imports a list of words into memory");
 ac.import(function (err, words) {
