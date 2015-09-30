@@ -36,8 +36,8 @@ assert.equal(error.message, 'callback argument MUST be a function');
 
 console.log('# ac.findWord finds a string in words array');
 ac.import(function () {
-  ac.findWord('awes', function (err, found) {
-    assert.equal(found.length, 4);
+  ac.findWord('care', function (err, found) {
+    assert.equal(found.length, 31);
     console.log("ok " + testindex++ + " Search for awes found: ", found);
   });
 });
