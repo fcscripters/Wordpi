@@ -1,10 +1,9 @@
-   
-	var words=document.getElementById("tenWords");
+ar words=document.getElementById("tenWords");
 		words.innerHTML='';
 
-	
 
-   function checkInputIsLongerThanThreeletters() {
+
+  function checkInputIsLongerThanThreeletters() {
        var userInput = document.getElementById("search").value;
        console.log(userInput.length + ' ' + userInput);
        if (userInput.length > 3 && /^[a-zA-Z]+$/.test(userInput)) {
@@ -14,7 +13,6 @@
    }
 
 
-   //var wordsArray;
 
    function sendInputToRequestWords(userInput) {
 
@@ -45,9 +43,9 @@
   	      words.innerHTML+='<ul id="words1"></ul>';
     }
 
-  
 
-   function addWords(wordsArray) {
+
+  unction addWords(wordsArray) {
 
 
       var words = document.getElementById('tenWords');
