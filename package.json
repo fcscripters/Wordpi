@@ -29,6 +29,9 @@
     "tape": "^4.2.0",
     "travis": "^0.1.1"
   },
+  "engines": {
+    "node": "0.10.x"
+  },
   "pre-commit": [
     "coverage"
   ]
