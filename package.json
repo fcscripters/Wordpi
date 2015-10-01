@@ -7,10 +7,9 @@
     "test": "./node_modules/.bin/tape ./test/*",
     "start": "node server.js",
     "coverage": "./node_modules/.bin/istanbul cover test/*",
-    "codeclimate": "CODECLIMATE_REPO_TOKEN=!!!**ADD-TOKEN-HERE**!!! ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < ./coverage/lcov.info",
+    "codeclimate": "CODECLIMATE_REPO_TOKEN=4b8416b1650efce0a80523dfaa69c83d1bf33290d193f87570bef6b9cc29c58d ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < ./coverage/lcov.info",
     "jshint": "jshint -c .jshintrc --exclude-path .gitignore .",
-    "nodemon":"./node_modules/.bin/nodemon ./server.js"
-
+    "nodemon": "./node_modules/.bin/nodemon ./server.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +23,7 @@
   "homepage": "https://github.com/fcscripters/Wordpi#readme",
   "devDependencies": {
     "istanbul": "^0.3.21",
+    "jshint": "^2.8.0",
     "pre-commit": "^1.1.1",
     "shot": "^1.6.1",
     "tape": "^4.2.0",
