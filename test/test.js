@@ -6,18 +6,6 @@ var shot = require("shot");
 var handler = require("../handler");
 var test = require("tape");
 
-test("Home page", function(t) {
-    var request = {
-        method: "GET",
-        url: "/"
-    };
-
-    shot.inject(handler, request, function(res) {
-        t.equal(res.statusCode, 200);
-        t.end();
-    });
-
-});
 
 assert.equal(typeof ac, 'object');
 assert.equal(typeof ac.import, 'function');
@@ -82,43 +70,23 @@ test("Going to /define/care return definition", function (t) {
 test("Going to /define/care return definition", function (t) {
   var request = {
     method: "GET",
-    url: "/userscript.js"
+    url:"/userInput.js"
   };
 
   shot.inject(handler, request, function (res) {
-    t.equal(res.statusCode, 200,"server returns userscript.js file correctly");
+    t.equal(res.statusCode, 200 ,"server returns userInput.js file correctly");
     t.end();
   });
 });
 
+test("Going to /define/care return definition", function (t) {
+  var request = {
+    method: "GET",
+    url:"/userscript.js"
+  };
 
-
-// console.log('# Definition gives some string as definition');
-// ac.define('cat', function (err, definitionString){
-//     assert.notEqual(definitionString, "");
-// });
-//
-// console.log('# Definition gives the correct definition');
-// ac.define('cat', function (err, definitionString){
-//     assert.notEqual(definitionString, "An animal of the family Felidae");
-// });
-//
-// console.log('# Empty definition array elements are suitably handled');
-// ac.define('dogberry', function (err, definitionString){
-//     assert.equal(definitionString.match(/<\/strong>\s+<br><br>/g), null);
-// });
-
-
-
-// console.log('# ac.stats tracks which words/string were searched for');
-// ac.import(function () {
-//   ac.stats('awesome', function (err, stats) {
-//     // console.log(stats);
-//     assert.equal(stats['awesome'].length, 1);
-//     ac.stats('awesome', function (err, stats) {
-//       // console.log(stats);
-//       assert.equal(stats['awesome'].length, 2);
-//       console.log("ok " + testindex++ + " stats (search count) for awesome: ", stats['awesome'].length);
-//     });
-//   });
-// });
+  shot.inject(handler, request, function (res) {
+    t.equal(res.statusCode, 404 ,"Error returns 200 in the if loop");
+    t.end();
+  });
+});

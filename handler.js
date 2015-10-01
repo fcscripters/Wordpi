@@ -41,14 +41,20 @@ module.exports = function handler(request, response) {
             console.log(request.url);
             fs.readFile(__dirname + request.url, function(err, file) {
                 if (err) {
+                  console.log(err);
+                  // dont reply 200 currently replying with 200 if in this loop.
+                  response.writeHead(404, {
+                      'Content-Type': 'text/' + ext
+                  });
                     response.end();
-                } else {
+                }
+                else {
                     var ext = request.url.split('.')[1];
                     response.writeHead(200, {
                         'Content-Type': 'text/' + ext
                     });
-                }
                     response.end(file);
+                }
 
               });
 
