@@ -1,3 +1,4 @@
+
 var words = document.getElementById("tenWords");
 words.innerHTML = '';
 var definition = document.getElementById("definition");
@@ -30,7 +31,7 @@ function sendInputToRequestWords(userInput) {
       addWords(wordsArray);
       setListToZero(definition);
       getDefinition(def);
-    };
+    }
   };
   request.open("GET", "/define/" + userInput, true);
   request.send(userInput);
@@ -51,8 +52,8 @@ function addWords(wordsArray) {
       wordsArray[i] = '';
     } else {
       words.innerHTML += '<li class="words">' + wordsArray[i] + '</li>';
-    }
-  }
+ }
+}
 }
 
 
