@@ -10,7 +10,7 @@
    }
 
 
-   
+ 
    function sendInputToRequestWords(userInput) {
 
        var request = new XMLHttpRequest();
