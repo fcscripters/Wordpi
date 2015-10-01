@@ -6,16 +6,16 @@ var shot = require("shot");
 var handler = require("../handler");
 var test = require("tape");
 
-test("Home page", function (t) {
-  var request = {
-    method: "GET",
-    url: "/"
-  };
+test("Home page", function(t) {
+    var request = {
+        method: "GET",
+        url: "/"
+    };
 
-  shot.inject(handler, request, function (res) {
-    t.equal(res.statusCode, 200);
-    t.end();
-  });
+    shot.inject(handler, request, function(res) {
+        t.equal(res.statusCode, 200);
+        t.end();
+    });
 
 });
 
@@ -24,9 +24,9 @@ assert.equal(typeof ac.import, 'function');
 
 
 console.log("# ac.import imports a list of words into memory");
-ac.import(function (err, words) {
-  console.log("ok " + testindex++ + " words.txt had " + words.length + " words in it!");
-  assert.equal(words.length, 235887);
+ac.import(function(err, words) {
+    console.log("ok " + testindex++ + " words.txt had " + words.length + " words in it!");
+    assert.equal(words.length, 235887);
 });
 
 console.log("# attempt to invoke ac.import without a valid callback");
@@ -35,11 +35,11 @@ var error = ac.import('string');
 assert.equal(error.message, 'callback argument MUST be a function');
 
 console.log('# ac.findWord finds a string in words array');
-ac.import(function () {
-  ac.findWord('care', function (err, found) {
-    assert.equal(found.length, 31);
-    console.log("ok " + testindex++ + " Search for awes found: ", found);
-  });
+ac.import(function() {
+    ac.findWord('care', function(err, found) {
+        assert.equal(found.length, 31);
+        console.log("ok " + testindex++ + " Search for awes found: ", found);
+    });
 });
 
 // console.log('# ac.stats tracks which words/string were searched for');
