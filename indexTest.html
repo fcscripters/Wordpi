@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>QUnit Example</title>
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.18.0.css">
+</head>
+<body>
+  <iframe src="index.html" width="100%" height="200px" id="iframe" frameborder="0"> </iframe>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <!-- <script src="tests.js"></script> -->
+  <script>
+
+    test('Have four characters been entered into box?', function(assert) {
+      var iframe = document.getElementById('iframe');
+      var target = iframe.contentDocument || iframe.contentWindow.document;
+
+      var done = assert.async();
+      var fourChar;
+      setTimeout (function(){
+        var char = target.getElementById('search').value;
+
+          if (char.length == 4){
+            fourChar = true;
+          }
+      console.log (fourChar);
+      done();
+      assert.equal(fourChar, true, 'There are four characters in the search box.' );
+
+    },2000);
+
+
+    });
+
+//javascript variables  document.getElementById('iframe').contentWindow["name"];
+
+    test('Are the correct words being returned?', function(assert) {
+      var iframe = document.getElementById('iframe');
+      var target = iframe.contentDocument || iframe.contentWindow.document;
+
+      var done = assert.async();
+      setTimeout (function(){
+        var char = document.getElementById(#"ID OF INPUT");
+        if (char) {
+            charValue = true;
+        }
+        assert.equal(charValue, true, 'Search Button has been clicked' );
+        done();
+      },2000);
+    });
+
+
+  </script>
+
+</body>
+</html>
