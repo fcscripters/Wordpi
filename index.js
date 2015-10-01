@@ -42,9 +42,11 @@ ac.define = function(word, callback){
   var options = {
     hostname:'api.wordnik.com',
     port: 80,
-    path: '/v4/word.json/care/definitions?limit=1&includeRelated=true&useCanonical=false&includeTags=false&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5',
+    path: '/v4/word.json/'+word+'/definitions?limit=1&includeRelated=true&useCanonical=false&includeTags=false&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5',
     method:'GET'
   };
+
+  var dataDef = '';
 
   var request = http.request(options, function (res) {
     console.log("inside request var");
@@ -54,17 +56,16 @@ ac.define = function(word, callback){
       body += chunk;
 
     });
-    var dataDef = [];
+
     res.on ('end', function(){
       var data = JSON.parse(body);
-      dataDef.push(data[0].text);
-      console.log(dataDef);
+      dataDef = (data[0].text);
+      callback(null, dataDef);
     });
 
   });
 
   request.end();
-  return callback(null, request);
 };
 
 

@@ -24,14 +24,21 @@ module.exports = function handler(request, response) {
 
             ac.import(function(err, words) {
                 ac.findWord(userInput, function(err, found) {
-                    response.end(JSON.stringify(found));
+                  console.log(userInput + "  is import in handler working  " + found);
+                    response.write(JSON.stringify(found));
+
+                    ac.define(found[0], function(err, definition){
+                      console.log("define test in handler");
+                      response.end(definition);
+                    });
+
                 });
             });
 
 
         }
-        else { 
-            console.log(request.url)
+        else {
+            console.log(request.url);
             fs.readFile(__dirname + request.url, function(err, file) {
                 if (err) {
                     response.end();
@@ -42,13 +49,13 @@ module.exports = function handler(request, response) {
                     });
                 }
                     response.end(file);
-        
-              })
-                    
+
+              });
 
 
-        };
-            
 
-        
+        }
+
+
+
 };
