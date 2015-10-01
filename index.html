@@ -9,17 +9,16 @@
     <div id='main'>
         <h1>Search your words! for Tormod</h1>
         <input type='text' id='search' > </input>
-        div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        
+        <div id="tenWords">
+            <ul id="words1"> </ul>
+          
+        </div>
+        <div class="definition">
+          
+        </div>
+
+
     </div>
     <div class="" id="autocomplete">
     </div>
@@ -33,6 +32,21 @@
     #main {
         height: 70%;
     }
+    #words1 li, #words2 li{  
+                    display: inline-block;
+                    position: relative;
+                    margin:1em;
+                    padding:1em;
+                    border: 1px solid black;
+                    list-style: none;
+    }
+    .definition {    width: 100px;
+                    height: 100px;
+                    background-color: grey;
+                    border:1px solid black;
+                    text-align: center;
+
+    }                 
     
     #quint {
         height: 30%;
