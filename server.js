@@ -7,8 +7,6 @@ var ac =require('./index');
 
 var index = fs.readFileSync(__dirname + '/index.html');
 
-
-
 http.createServer(handler).listen(port)
 
 console.log('node http server listening on http://localhost:' + port);

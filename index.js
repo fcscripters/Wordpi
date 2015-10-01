@@ -1,4 +1,5 @@
 var fs = require('fs');
+var http = require('http');
 var ac = {};
 
 ac.import = function (callback) {
@@ -34,7 +35,38 @@ ac.findWord = function (word, callback) {
   return callback(null, found);
 };
 
-/*ac.define = function ()
-*/
+ac.define = function(word, callback){
+
+  //  var defurl = 'http://api.wordnik.com:80/v4/word.json/care/definitions?limit=200&includeRelated=true&useCanonical=false&includeTags=false&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5';
+  console.log ("define in index.js");
+  var options = {
+    hostname:'api.wordnik.com',
+    port: 80,
+    path: '/v4/word.json/care/definitions?limit=1&includeRelated=true&useCanonical=false&includeTags=false&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5',
+    method:'GET'
+  };
+
+  var request = http.request(options, function (res) {
+    console.log("inside request var");
+    var body = '';
+    res.setEncoding('utf8');
+    res.on('data', function (chunk){
+      body += chunk;
+
+    });
+    var dataDef = [];
+    res.on ('end', function(){
+      var data = JSON.parse(body);
+      dataDef.push(data[0].text);
+      console.log(dataDef);
+    });
+
+  });
+
+  request.end();
+  return callback(null, request);
+};
+
+
 
 module.exports = ac;
