@@ -20,14 +20,23 @@ http.createServer(function handler(request, response) {
   if (url.indexOf('/define') > -1){
     var userword = url.split('/')[2].toString();
 response.writeHead(200, {"Content-Type": "text/html"});
-response.write(userword);
+response.write("<h1>"+userword+"</h1>");
 console.log(' - - - - - - - - - ->>>> ',userword);
 
- // ac.import(function() {
    ac.findWord(userword, function(err, found) {
-     response.end(JSON.stringify(found));
+     response.write(JSON.stringify(found));
+     console.log ("find word works");
+      ac.define(userword, function(err, request){
+        //respond to the request
+        console.log ("define");
+        // console.log(dataDef);
+        // response.write(request);
+        response.end();
+
+      })
    });
- // });
+
+
 
 
   }
