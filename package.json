@@ -30,9 +30,6 @@
     "travis": "^0.1.1"
   },
   "pre-commit": [
-    "jshint",
-    "coverage",
-    "codeclimate",
-    "Travis"
+    "coverage"
   ]
 }
