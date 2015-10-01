@@ -24,31 +24,44 @@ module.exports = function handler(request, response) {
 
             ac.import(function(err, words) {
                 ac.findWord(userInput, function(err, found) {
-                    response.end(JSON.stringify(found));
+                  console.log(userInput + "  is import in handler working  " + found);
+                    response.write(JSON.stringify(found));
+
+                    ac.define(found[0], function(err, definition){
+                      console.log("define test in handler");
+                      response.end(definition);
+                    });
+
                 });
             });
 
 
         }
-        else { 
-            console.log(request.url)
+        else {
+            console.log(request.url);
             fs.readFile(__dirname + request.url, function(err, file) {
                 if (err) {
+                  console.log(err);
+                  // dont reply 200 currently replying with 200 if in this loop.
+                  response.writeHead(404, {
+                      'Content-Type': 'text/' + ext
+                  });
                     response.end();
-                } else {
+                }
+                else {
                     var ext = request.url.split('.')[1];
                     response.writeHead(200, {
                         'Content-Type': 'text/' + ext
                     });
-                }
                     response.end(file);
-        
-              })
-                    
+                }
+
+              });
 
 
-        };
-            
 
-        
+        }
+
+
+
 };
