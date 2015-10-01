@@ -1,4 +1,4 @@
-ar words=document.getElementById("tenWords");
+var words=document.getElementById("tenWords");
 		words.innerHTML='';
 
 
@@ -45,7 +45,7 @@ ar words=document.getElementById("tenWords");
 
 
 
-  unction addWords(wordsArray) {
+  function addWords(wordsArray) {
 
 
       var words = document.getElementById('tenWords');
