@@ -79,6 +79,18 @@ test("Going to /define/care return definition", function (t) {
   });
 });
 
+test("Going to /define/care return definition", function (t) {
+  var request = {
+    method: "GET",
+    url: "/userscript.js"
+  };
+
+  shot.inject(handler, request, function (res) {
+    t.equal(res.statusCode, 200,"server returns userscript.js file correctly");
+    t.end();
+  });
+});
+
 
 
 // console.log('# Definition gives some string as definition');
