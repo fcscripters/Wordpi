@@ -19,7 +19,7 @@ module.exports = function handler(request, response) {
             response.writeHead(200, {
                 "Content-Type": "text/html"
             });
-            response.write(userInput);
+            //response.write(userInput);
             console.log(' - - - - - - - - - ->>>> ', userInput);
 
             ac.import(function(err, words) {
