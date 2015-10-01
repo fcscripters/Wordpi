@@ -30,6 +30,6 @@
     "travis": "^0.1.1"
   },
   "pre-commit": [
-    "coverage",
+    "coverage"
   ]
 }
