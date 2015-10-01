@@ -13,16 +13,7 @@ ac.import = function (callback) {
   });
 };
 
-// ac.stats = function (word, callback) {
-//   if (!ac.searches) {
-//     ac.searches = {};
-//   }
-//   if (!ac.searches[word]) {
-//     ac.searches[word] = [];
-//   }
-//   ac.searches[word].push(new Date().getTime());
-//   callback(null, ac.searches);
-// };
+
 
 ac.findWord = function (word, callback) {
   // who wants to volunteer to implement the method?
@@ -58,6 +49,7 @@ ac.define = function(word, callback){
     });
 
     res.on ('end', function(){
+
       var data = JSON.parse(body);
       dataDef = (data[0].text);
       callback(null, dataDef);

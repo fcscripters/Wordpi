@@ -6,7 +6,6 @@ var index = fs.readFileSync(__dirname + '/index.html');
 
 
 module.exports = function handler(request, response) {
-        console.log('request: '+request.url);
         if (request.url.length === 1) {
             response.writeHead(200, {
                 "Content-Type": "text/html"
@@ -20,16 +19,21 @@ module.exports = function handler(request, response) {
                 "Content-Type": "text/html"
             });
             //response.write(userInput);
-            console.log(' - - - - - - - - - ->>>> ', userInput);
 
             ac.import(function(err, words) {
                 ac.findWord(userInput, function(err, found) {
                   console.log(userInput + "  is import in handler working  " + found);
                     response.write(JSON.stringify(found));
-
-                    ac.define(found[0], function(err, definition){
-                      console.log("define test in handler");
-                      response.end(definition);
+                     var ran =  Math.random();
+                    if (found.length>10){
+                      ran = Math.floor(ran * 10);
+                    }else{
+                      ran = Math.floor(ran * found.length);
+                    }
+                     console.log(ran);
+                    ac.define(found[ran], function(err, definition){
+                      response.write('£'+definition);
+                      response.end('£'+ran.toString());
                     });
 
                 });
@@ -38,7 +42,6 @@ module.exports = function handler(request, response) {
 
         }
         else {
-            console.log(request.url);
             fs.readFile(__dirname + request.url, function(err, file) {
                 if (err) {
                   console.log(err);
