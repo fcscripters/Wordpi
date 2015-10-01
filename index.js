@@ -37,4 +37,4 @@ ac.findWord = function (word, callback) {
 /*ac.define = function ()
 */
 
-/*module.exports = ac;*/
+module.exports = ac;
