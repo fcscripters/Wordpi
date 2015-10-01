@@ -7,7 +7,7 @@
     "test": "./node_modules/.bin/tape ./test/*",
     "start": "node server.js",
     "coverage": "./node_modules/.bin/istanbul cover test/*",
-    "codeclimate": "CODECLIMATE_REPO_TOKEN=4b8416b1650efce0a80523dfaa69c83d1bf33290d193f87570bef6b9cc29c58d ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < ./coverage/lcov.info",
+    "codeclimate": "CODECLIMATE_REPO_TOKEN=4b8416b1650efce0a80523dfaa69c83d1bf33290d193f87570bef6b9cc29c58d codeclimate-test-reporter < ./coverage/lcov.info",
     "jshint": "jshint -c .jshintrc --exclude-path .gitignore .",
     "nodemon": "./node_modules/.bin/nodemon ./server.js"
   },
