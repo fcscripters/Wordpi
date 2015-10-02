@@ -38,7 +38,7 @@ document.getElementById("search").addEventListener("keyup", function(e) {
 
 function setListToZero(element) {
   element.innerHTML = '';
-  element.innerHTML += '<ul id="words1"></ul>';
+  element.innerHTML += '<ul id="words"></ul>';
 }
 
 function addWords(wordsArray) {
