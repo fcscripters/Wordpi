@@ -8,6 +8,8 @@ Simple word guessing game created using Node.js
 [![codecov.io](http://codecov.io/github/fcscripters/Wordpi/coverage.svg?branch=master)](http://codecov.io/github/fcscripters/Wordpi?branch=master)
 [![Dependency Status](https://david-dm.org/fcscripters/Wordpi.svg)](https://david-dm.org/fcscripters/Wordpi)
 [![devDependency Status](https://david-dm.org/fcscripters/Wordpi/dev-status.svg)](https://david-dm.org/fcscripters/Wordpi#info=devDependencies)
+[![HitCount](https://hitt.herokuapp.com/fcscripters/Wordpi.svg)](https://github.com/fcscripters/Wordpi)
+
 
 WordPi is an interactive Word Definition game, in which a user will have to match a definition to a specific word.
 
