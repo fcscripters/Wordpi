@@ -51,7 +51,8 @@ function addWords(wordsArray) {
     if (wordsArray[i] === undefined) {
       wordsArray[i] = '';
     } else {
-      words.innerHTML += '<li class="words">' + wordsArray[i] + '</li>';
+      words.innerHTML += '<li class="words" id="words'+i+'" onclick="chooseClass(this.id)">' + wordsArray[i] + '</li>';
+
  }
 }
 }
@@ -64,23 +65,13 @@ function getDefinition(def) {
 
 }
 
-// function choose() {
-//   console.log('!!!!!!!!!!!');
-//
-//   var words = document.getElementsByClassName("words");
-//
-//       document.getElementByClassName('words').className = 'blue';
-//       if (i == correct) {
-//         console.log('GREEN');
-//
-//         document.getElementByClassName('words').className = 'green';
-//       } else {
-//         console.log('RED');
-//
-//         document.getElementByClassName('words').className = 'red';
-//
-//       }
-// }
-
-
-//document.getElementsByClassName('words').addEventListener('click',choose);
+function chooseClass(id){
+var choice = id.slice(-1);
+console.log("--------id",id);
+if ( choice == correct){
+document.getElementById(id).className = 'green';
+} else{
+document.getElementById(id).className = 'red';
+console.log('RED');
+}
+}

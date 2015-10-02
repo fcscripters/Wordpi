@@ -28,19 +28,19 @@ ac.findWord = function (word, callback) {
 
 ac.define = function(word, callback){
 
-  //  var defurl = 'http://api.wordnik.com:80/v4/word.json/care/definitions?limit=200&includeRelated=true&useCanonical=false&includeTags=false&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5';
-  console.log ("define in index.js");
+console.log("this is word in define ----",word);
   var options = {
     hostname:'api.wordnik.com',
     port: 80,
     path: '/v4/word.json/'+word+'/definitions?limit=1&includeRelated=true&useCanonical=false&includeTags=false&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5',
     method:'GET'
   };
+  console.log("-------path",options.path);
+
 
   var dataDef = '';
 
   var request = http.request(options, function (res) {
-    console.log("inside request var");
     var body = '';
     res.setEncoding('utf8');
     res.on('data', function (chunk){
@@ -49,10 +49,17 @@ ac.define = function(word, callback){
     });
 
     res.on ('end', function(){
-
+      console.log("-----------body",body);
       var data = JSON.parse(body);
+      console.log("----------->definition form index.js",dataDef);
+      if(data[0]){
       dataDef = (data[0].text);
+      console.log("----------->definition form index.js",dataDef);
       callback(null, dataDef);
+    }
+    else{
+      callback("You have typed in a word that is not in the dictionary", null);
+    }
     });
 
   });
