@@ -62,6 +62,21 @@ test("Going to /define/care return definition", function(t) {
   });
 });
 
+test("Going to null if no definition is present", function(t) {
+  var request = {
+    method: "GET",
+    url: "/define/feelingful"
+  };
+
+  shot.inject(handler, request, function(res) {
+    console.log("this is payload", res);
+    var payload = res.payload;
+    var result = payload.indexOf('null') > -1;
+    t.equal(result, true, "Definition retunred when requested using http");
+    t.end();
+  });
+});
+
 test("Going to /define/care return definition", function(t) {
   var request = {
     method: "GET",
