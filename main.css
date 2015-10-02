@@ -10,12 +10,12 @@ margin:1em;
 h4 {
 margin-bottom: 0;
 }
-main {
+#main {
  height: 70%;
  text-align: center;
 }
-tenWords, #search { margin:1em;}
-search { border-radius: 10px}
+#tenWords, #search { margin:1em;}
+#search { border-radius: 10px}
 .words {
 display: inline-block;
 position: relative;
@@ -25,7 +25,7 @@ border: 1px solid black;
 border-radius: 10px;
 list-style: none;
 }
-definition {
+#definition {
  width: 20em;
  height: 10em;
  background-color: lightgrey;
@@ -34,13 +34,13 @@ definition {
  text-align: center;
  margin: 1em auto;
 }
-quint {
+#quint {
  height: 30%;
  bottom: 0;
  position: fixed;
 }
 .red {
-color: red;
+background-color: red;
 list-style: none;
 font-size: 20px;
 display: inline-block;
@@ -55,7 +55,7 @@ color: blue;
 font-size: 20px;
 }
 .green {
-color: green;
+background-color: green;
 font-size: 20px;
 display: inline-block;
 position: relative;
