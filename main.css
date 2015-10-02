@@ -5,94 +5,87 @@ body {
     background-image: url(http://www.greenpm.co.uk/wp-content/uploads/2014/06/default1.jpg);
 }
 
-h1 {
-    color: purple;
-    font-size: 4em;
-    margin: 1em;
-}
+  h1 {
+        color: purple;
+        font-size: 3em;
+        margin: 0.15em;
+    }
+    h4 {
+        margin-bottom: 0;
+        font-size: 0.75em;
+    }
+    p {
+        font-size: 0.75em;
+    }
+    #main {
+        height: auto;
+        text-align: center;
+        margin: 2em 1em;
+        background-color: white;
+        padding-bottom: 3em;
+    }
+    #tenWords {
+        margin: 0.5em;
+        padding :1em;
+        height: 4em;
+        width: 5em;
+        display: inline;
+    }
+    #search {
+        border-radius: 10px;
+        font-size: 1em;
+    }
+    .words {
+        background-color: white;
+        display: inline-block;
+        position: relative;
+        margin: 0.2em;
+        padding: 0.5em;
+        border: 1px solid black;
+        border-radius: 10px;
+        list-style: none;
+        font-size: 1em;
+    }
+    #definition {
+        width: 15em;
+        height: 4em;
+        background-color: lightgrey;
+        border: 1px solid black;
+        border-radius: 10px;
+        text-align: center;
+        margin: 0.5em auto;
+        font-size: 1em;
+    }
+    #quint {
+        height: 30%;
+        bottom: 0;
+        position: fixed;
+    }
+    .red {
+        background-color: red;
+        display: inline-block;
+        position: relative;
+        margin:0.2em;
+        padding: 0.5em;
+        border: 1px solid black;
+        border-radius: 10px;
+        list-style: none;
+        font-size: 1.1em;
+    }
+    .green {
+        background-color: green;
+        display: inline-block;
+        position: relative;
+        margin: 0.2em;
+        padding: 0.5em;
+        border: 1px solid black;
+        border-radius: 10px;
+        list-style: none;
+        font-size: 1.1em;
+    }
 
-h4 {
-    margin-bottom: 0;
-    font-size: 3em;
-}
 
-p {
-    font-size: 2em;
-}
-
-#main {
-    height: auto;
-    text-align: center;
-    margin: 2em;
-    background-color: white;
-}
-
-#tenWords {
-    margin: 1em;
-    height: 4em;
-    width: 10em;
-    display: inline;
-}
-
-#search {
-    border-radius: 10px;
-    font-size: 4em;
-}
-
-.words {
-    background-color: white;
-    display: inline-block;
-    position: relative;
-    margin: 0.2em;
-    padding: 0.5em;
-    border: 1px solid black;
-    border-radius: 10px;
-    list-style: none;
-    font-size: 3em;
-}
-
-#definition {
-    width: 15em;
-    height: 6em;
-    background-color: lightgrey;
-    border: 1px solid black;
-    border-radius: 10px;
-    text-align: center;
-    margin: 1em auto;
-    font-size: 3em;
-}
-
-#quint {
-    height: 30%;
-    bottom: 0;
-    position: fixed;
-}
-
-.red {
-    background-color: red;
-    display: inline-block;
-    position: relative;
-    margin: 1em;
-    padding: 0.5em;
-    border: 1px solid black;
-    border-radius: 10px;
-    list-style: none;
-    font-size: 3em;
-}
-
-.green {
-    background-color: green;
-    display: inline-block;
-    position: relative;
-    margin: 1em;
-    padding: 0.5em;
-    border: 1px solid black;
-    border-radius: 10px;
-    list-style: none;
-    font-size: 3em;
-}
-
-@media (min-width:480px) {
+@media (min-width:900px) {
 
     h1 {
         color: purple;
@@ -109,7 +102,7 @@ p {
     #main {
         height: auto;
         text-align: center;
-        margin: 1em 4em;
+        margin: 2em 4em;
         background-color: white;
         padding-bottom: 3em;
     }
@@ -136,7 +129,7 @@ p {
         font-size: 1.5em;
     }
     #definition {
-        width: 40em;
+        width: 25em;
         height: 4em;
         background-color: lightgrey;
         border: 1px solid black;
