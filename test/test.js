@@ -60,7 +60,7 @@ test("Going to /define/care return definition", function (t) {
   shot.inject(handler, request, function (res) {
     console.log("this is payload",res);
     var payload = res.payload;
-      var result = payload.indexOf('A burdened state of mind, as that arising from heavy responsibilities; worry.') > -1;
+      var result = payload.indexOf('£') > -1;
     t.equal(result,true,"Definition retunred when requested using http");
     // t.ok(res.payload.match('<h1>Richard</h1>'));
     t.end();
