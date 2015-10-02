@@ -33,7 +33,7 @@ h4 {
   display: inline-block;
   position: relative;
   margin: 1em;
-  padding: 1em;
+ /*  //padding: 1em; */
   border: 1px solid black;
   border-radius: 10px;
   list-style: none;
@@ -60,8 +60,9 @@ font-size: 20px;
 display: inline-block;
 position: relative;
 margin: 1em;
-padding: 1em;
+/* padding: 1em; */
 border: 1px solid black;
+border-radius: 10px;
 list-style: none;
 
 }
@@ -76,7 +77,8 @@ font-size: 20px;
 display: inline-block;
 position: relative;
 margin: 1em;
-padding: 1em;
+/* padding: 1em; */
 border: 1px solid black;
+border-radius: 10px;
 list-style: none;
 }
