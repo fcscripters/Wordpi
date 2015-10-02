@@ -1,66 +1,70 @@
 body {
-min-height: 100%;
-height: 100%;
-text-align: center;
+  min-height: 100%;
+  height: 100%;
+  text-align: center;
 }
 h1 {
-color: purple;
-margin:1em;
+  color: purple;
+  margin: 1em;
 }
 h4 {
-margin-bottom: 0;
+  margin-bottom: 0;
 }
 main {
- height: 70%;
- text-align: center;
+  height: 70%;
+  text-align: center;
 }
-tenWords, #search { margin:1em;}
-search { border-radius: 10px}
+tenWords, #search {
+  margin: 1em;
+}
+search {
+  border-radius: 10px
+}
 .words {
-display: inline-block;
-position: relative;
-margin: 1em;
-padding: 1em;
-border: 1px solid black;
-border-radius: 10px;
-list-style: none;
+  display: inline-block;
+  position: relative;
+  margin: 1em;
+  padding: 1em;
+  border: 1px solid black;
+  border-radius: 10px;
+  list-style: none;
 }
 definition {
- width: 20em;
- height: 10em;
- background-color: lightgrey;
- border: 1px solid black;
- border-radius: 10px;
- text-align: center;
- margin: 1em auto;
+  width: 20em;
+  height: 10em;
+  background-color: lightgrey;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  margin: 1em auto;
 }
 quint {
- height: 30%;
- bottom: 0;
- position: fixed;
+  height: 30%;
+  bottom: 0;
+  position: fixed;
 }
 .red {
-color: red;
-list-style: none;
-font-size: 20px;
-display: inline-block;
-position: relative;
-margin: 1em;
-padding: 1em;
-border: 1px solid black;
-list-style: none;
+  color: red;
+  list-style: none;
+  font-size: 20px;
+  display: inline-block;
+  position: relative;
+  margin: 1em;
+  padding: 1em;
+  border: 1px solid black;
+  list-style: none;
 }
 .blue {
-color: blue;
-font-size: 20px;
+  color: blue;
+  font-size: 20px;
 }
 .green {
-color: green;
-font-size: 20px;
-display: inline-block;
-position: relative;
-margin: 1em;
-padding: 1em;
-border: 1px solid black;
-list-style: none;
+  color: green;
+  font-size: 20px;
+  display: inline-block;
+  position: relative;
+  margin: 1em;
+  padding: 1em;
+  border: 1px solid black;
+  list-style: none;
 }
